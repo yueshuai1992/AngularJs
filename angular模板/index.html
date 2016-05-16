@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+</head>
+<body ng-app="myapp">
+	<div ng-controller="data" class="container">
+		<table class="table table-striped">
+		  	<tr>
+		  		<th>编号</th>
+		  		<th>名称</th>
+		  		<th>数量</th>
+		  		<th>单价</th>
+		  		<th>总价</th>
+		  		<th>操作</th>
+		  	</tr>
+		  	<tr ng-repeat="obj in message">
+				<td>{{obj.number}}</td>
+				<td>{{obj.name}}</td>
+				<td>{{obj.quantity}}</td>
+				<td>{{obj.price}}</td>
+				<td>
+					{{obj.quantity*obj.price}}
+				</td>
+				<td>
+					<button type="button" class="btn btn-danger" >移除</button>
+				</td>
+		  	</tr>
+		</table>
+	</div>
+
+<script src = "js/angular.js"></script>
+<script src = "js/controller.js"></script>
+<script>
+</script>
+
+
+</body>
+</html>

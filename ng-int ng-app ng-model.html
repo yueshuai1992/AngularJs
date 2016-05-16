@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- ng-init 初始化应用数据  -->
+	<div ng-init="firstname = 'Jone'">
+		<!-- ng-model输入域的值绑定到应用程序中 -->
+		<input type="text" ng-model="firstname">
+		<p>hello{{firstname}}</p>
+	</div>
+	<div ng-init = "firstNumber=5;secondNumber=3" ></div>
+	<h1>价格计算器</h1>
+	<input type="text" ng-model="firstNumber">
+	<input type="text" ng-model="secondNumber">
+	<p>乘积：{{firstNumber*secondNumber}}</p>
+
+
+	<!-- ng-repeat 克隆html元素-->
+	<div ng-init="names = ['li','zhang','ha']">
+		<h1>循环数组</h1>
+		<p>{{names}}</p>
+		<li ng-repeat="x in names">
+			{{x}}
+		</li>
+	</div>
+
+	  <div ng-init="names1 = [{name:'xx',age:15},{name:'bb',age:13},{name:'cc',age:33}]">
+		<ul>
+			<li ng-repeat="x in names1">
+				{{x.name+"+"+x.age}}
+			</li>
+		</ul>
+	  </div>
+
+	<script src = "angular.min.js"></script>
+
+
+</body>
+</html>
